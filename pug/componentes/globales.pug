@@ -1,0 +1,30 @@
+mixin cajaDeVideo(imagenThumbnail, duracionVideo, imagenProfile, tituloDelVideo,nombreCanal, visitas, fecha)
+    .caja
+        a.caja--link
+            a.caja__miniatura 
+                img(src="../assets/img/thumbnail/" + imagenThumbnail + ".jpg")
+                span.caja__miniatura--duracion #{duracionVideo}
+            .caja__details 
+                a.caja__details--creator
+                    img(src="../assets/img/profile/" + imagenProfile)
+                .caja__details--video
+                    p.caja__details--tittle #{tituloDelVideo}
+                    //- el a tiene que tener un :hover
+                    .caja__details--extra
+                        a.caja__details--channel-name #{nombreCanal}
+                        span.caja__details--views #{visitas}
+                        span.caja__details--date #{fecha}
+
+
+mixin icono(imgName)
+    a.icon--container
+        img(src="../assets/icons/" + imgName + ".png")
+        
+        
+
+
+-var testFile1 = "lupa"
+-var testFile2 = "campana"
+-var categorias = ["Todos", "Novedad para ti", "Busqueda 1", "Busqueda 5"]
+-var footerIcons = ["home", "shorts", "upload", "suscripcion", "biblioteca"]
+-var thumbnails = ["galaxia1","galaxia3","mar"]

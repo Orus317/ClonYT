@@ -1,0 +1,21 @@
+$color-claro: #FFFFFF; 
+$color-fondo-primario: #F9F9F9;
+$color-fondo-secundario: #E5E5E5;
+$color-fondo-seleccionado:#292929; 
+$color-fuente-primaria: #030303;
+$color-fuente-seleccionada: #E4E4E4;
+
+@mixin icon{
+    width: 25px;
+    height: 25px;
+}
+@mixin cajaConScrollX{
+    overflow-x: scroll;
+    white-space: nowrap; //Súper importante para que los elementos no se apiñen unos con otros
+}
+
+@function get-opacity($color, $nivel) {
+    @return rgba($color, $nivel);
+}
+
+

@@ -1,0 +1,20 @@
+header.header
+    .header__icons
+        //- Las dos cajas de abajo se repartiran en dos secciones en mobile 
+        .header__icons--yt 
+            +icono("youtube")
+        .header__icons--preferences
+            +icono("screen-share")
+            +icono(testFile2)
+            +icono(testFile1)
+            +icono("profile")
+    .header__categories
+        //-Exporar y elements son dos cajas distintas que tendrán space-between, por eso las separé así
+        p.header__categories--explorar
+            a
+                img(src="../../assets/icons/compass.png", alt="")
+                span Explorar 
+        .header__categories--elements
+            ul 
+                each categoria in categorias 
+                    li: a #{categoria}
