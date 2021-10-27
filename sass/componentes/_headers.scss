@@ -12,17 +12,21 @@
             img{
                 width: 80px;
             }
+            @include media(tablet){
+                img{
+                    width: 100px;
+                }
+            }
         }
         &--preferences {
             display: flex;
             justify-content: space-between;
             align-items: center;
             width: 50%;
-            
+            max-width: 250px;
             .icon--container{
                 display: block;
                 img{
-                    object-fit: fit;
                     @include icon;
                 }
             }

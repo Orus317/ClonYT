@@ -8,6 +8,10 @@ $color-fuente-seleccionada: #E4E4E4;
 @mixin icon{
     width: 25px;
     height: 25px;
+    @include media(tablet){
+        width: 35px;
+        height: 35px;
+    }
 }
 @mixin cajaConScrollX{
     overflow-x: scroll;

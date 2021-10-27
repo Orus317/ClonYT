@@ -475,19 +475,30 @@ output {
 .header__icons--yt img {
   width: 80px;
 }
+@media only screen and (min-width: 768px) {
+  .header__icons--yt img {
+    width: 100px;
+  }
+}
 .header__icons--preferences {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 50%;
+  max-width: 250px;
 }
 .header__icons--preferences .icon--container {
   display: block;
 }
 .header__icons--preferences .icon--container img {
-  object-fit: fit;
   width: 25px;
   height: 25px;
+}
+@media only screen and (min-width: 768px) {
+  .header__icons--preferences .icon--container img {
+    width: 35px;
+    height: 35px;
+  }
 }
 .header__icons--preferences .icon--container:last-child img {
   margin-right: 10px;
@@ -550,15 +561,33 @@ output {
   background-color: #E5E5E5;
 }
 
-.contenedor, .caja {
+.contenedor {
   display: flex;
   flex-direction: column;
+}
+@media only screen and (min-width: 768px) {
+  .contenedor {
+    display: grid;
+    justify-self: center;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 15px;
+    max-width: 800px;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
 }
 
 .caja {
   width: 100%;
-  max-height: 330px;
   margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (min-width: 768px) {
+  .caja {
+    min-height: 250px;
+    max-width: 380px;
+  }
 }
 .caja--link {
   display: block;
@@ -569,7 +598,13 @@ output {
 }
 .caja__miniatura img {
   width: 100%;
-  height: 225px;
+  height: 80%;
+}
+@media only screen and (min-width: 768px) {
+  .caja__miniatura img {
+    width: 100%;
+    height: 200px;
+  }
 }
 .caja__miniatura--duracion {
   display: block;
@@ -597,6 +632,11 @@ output {
   flex-direction: column;
   padding: 5px 5px 0 5px;
 }
+@media only screen and (min-width: 768px) {
+  .caja__details--video {
+    justify-content: space-between;
+  }
+}
 .caja__details--tittle {
   margin-bottom: 4px;
   line-height: 18px;
@@ -613,20 +653,23 @@ output {
 }
 
 .footer {
+  display: flex;
+  justify-content: center;
   position: sticky;
   bottom: 0;
   background-color: #FFFFFF;
   border-top: 1px solid rgba(3, 3, 3, 0.3);
 }
 .footer__icons {
-  margin-top: 7px;
-  margin-bottom: 7px;
-  padding: 0 25px;
-  width: 100%;
-  height: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  max-width: 400px;
+  height: 50px;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  padding: 0 25px;
 }
 .footer .icon--container {
   display: flex;
