@@ -461,10 +461,26 @@ output {
 .header {
   margin-top: 10px;
 }
+@media only screen and (min-width: 992px) {
+  .header {
+    height: 104px;
+    position: fixed;
+    z-index: 1000;
+    background-color: #F9F9F9;
+    margin-top: 0;
+    padding-top: 10px;
+  }
+}
 .header__icons {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@media only screen and (min-width: 768px) {
+  .header__icons {
+    display: grid;
+    grid-template-columns: 2fr 5fr 3fr;
+  }
 }
 .header__icons--yt {
   margin-left: 10px;
@@ -480,12 +496,45 @@ output {
     width: 100px;
   }
 }
+.header__icons .header__searcher {
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  .header__icons .header__searcher {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .header__icons .header__searcher--container {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+  }
+  .header__icons .header__searcher input {
+    width: 100%;
+    padding-left: 15px;
+    border: 0;
+    outline: 0;
+  }
+  .header__icons .header__searcher--icon {
+    background-color: #E4E4E4;
+    padding: 5px;
+  }
+}
 .header__icons--preferences {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 50%;
   max-width: 250px;
+}
+@media only screen and (min-width: 768px) {
+  .header__icons--preferences {
+    width: 100%;
+    justify-self: end;
+  }
 }
 .header__icons--preferences .icon--container {
   display: block;
@@ -576,6 +625,12 @@ output {
     margin: 0 auto;
   }
 }
+@media only screen and (min-width: 992px) {
+  .contenedor {
+    padding-top: 104px;
+    z-index: -100;
+  }
+}
 
 .caja {
   width: 100%;
@@ -660,6 +715,16 @@ output {
   background-color: #FFFFFF;
   border-top: 1px solid rgba(3, 3, 3, 0.3);
 }
+@media only screen and (min-width: 992px) {
+  .footer {
+    position: fixed;
+    height: 100%;
+    width: 8vw;
+    border: 0;
+    left: 0;
+    top: 105px;
+  }
+}
 .footer__icons {
   display: flex;
   justify-content: space-between;
@@ -670,6 +735,15 @@ output {
   margin-top: 7px;
   margin-bottom: 7px;
   padding: 0 25px;
+}
+@media only screen and (min-width: 992px) {
+  .footer__icons {
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-between;
+    width: 8vw;
+    height: 400px;
+  }
 }
 .footer .icon--container {
   display: flex;

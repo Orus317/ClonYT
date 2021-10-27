@@ -3,11 +3,17 @@ header.header
         //- Las dos cajas de abajo se repartiran en dos secciones en mobile 
         .header__icons--yt 
             +icono("youtube")
+        .header__searcher 
+            .header__searcher--container 
+                input(type="text" placeholder="Buscar")
+                .header__searcher--icon    
+                    +icono(testFile1) 
         .header__icons--preferences
             +icono("screen-share")
             +icono(testFile2)
             +icono(testFile1)
             +icono("profile")
+    
     .header__categories
         //-Exporar y elements son dos cajas distintas que tendrán space-between, por eso las separé así
         p.header__categories--explorar

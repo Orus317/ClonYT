@@ -5,6 +5,14 @@
     bottom: 0;
     background-color: $color-claro;
     border-top: 1px solid get-opacity($color-fuente-primaria, .3);
+    @include media(desktop-s){
+        position: fixed;
+        height: 100%;
+        width: 8vw;
+        border: 0;
+        left: 0;
+        top: 105px;
+    }
     &__icons{
         display: flex;
         justify-content: space-between;
@@ -15,6 +23,14 @@
         margin-top: 7px;
         margin-bottom: 7px;
         padding: 0 25px;
+        @include media(desktop-s){
+            flex-direction: column;
+            justify-content: center;
+            align-content: space-between;
+            width: 8vw;
+            height: 400px;
+        }
+        
     }
     .icon--container{
         display: flex;

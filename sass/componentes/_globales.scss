@@ -22,4 +22,9 @@ $color-fuente-seleccionada: #E4E4E4;
     @return rgba($color, $nivel);
 }
 
-
+// @include media(desktop-s){
+//     body{
+//         display: grid;
+//         // grid-template-columns: 1fr auto;
+//     }
+// }
