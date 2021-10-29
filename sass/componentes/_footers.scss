@@ -29,6 +29,7 @@
             align-content: space-between;
             width: 8vw;
             height: 400px;
+            padding: 0;
         }
         
     }
@@ -39,6 +40,11 @@
         flex-direction: column;
         align-items: center;
         font-size: 12.5px;
+        @include media(desktop-s){
+            height: 60px;
+            margin-bottom: 20px;
+            flex-direction: row;
+        }
     }
     .icon--container img{
         text-align: center;
@@ -48,6 +54,10 @@
     .icon--container:nth-child(n)::after{
         position: absolute;
         bottom: 0;
+        @include media(desktop-s){
+            bottom: auto;
+            left: 120%;
+        }
     }
     .icon--container:first-child::after {
         content: "Principal";
@@ -65,6 +75,9 @@
         img{
             width: 33px;
             height: 33px;
+        }
+        @include media(desktop-s){
+            display: none;
         }
     }
     .icon--container:nth-child(4)::after{

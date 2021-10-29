@@ -561,6 +561,11 @@ output {
   justify-content: space-between;
   align-items: center;
 }
+@media only screen and (min-width: 992px) {
+  .header__categories {
+    justify-content: initial;
+  }
+}
 .header__categories--explorar {
   display: flex;
   justify-content: center;
@@ -609,6 +614,22 @@ output {
   border-radius: 30px;
   background-color: #E5E5E5;
 }
+@media only screen and (min-width: 992px) {
+  .header__categories--elements::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  .header__categories--elements::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+  }
+  .header__categories--elements::-webkit-scrollbar-thumb:hover {
+    display: block;
+  }
+  .header__categories--elements::-webkit-scrollbar-thumb:active {
+    background: #797979;
+  }
+}
 
 .contenedor {
   display: flex;
@@ -617,7 +638,6 @@ output {
 @media only screen and (min-width: 768px) {
   .contenedor {
     display: grid;
-    justify-self: center;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 15px;
     max-width: 800px;
@@ -627,8 +647,10 @@ output {
 }
 @media only screen and (min-width: 992px) {
   .contenedor {
-    padding-top: 104px;
-    z-index: -100;
+    padding-top: 110px;
+    grid-template-columns: repeat(auto-fit, 370px);
+    max-width: 100%;
+    margin: 0 0 0 15vw;
   }
 }
 
@@ -743,6 +765,7 @@ output {
     align-content: space-between;
     width: 8vw;
     height: 400px;
+    padding: 0;
   }
 }
 .footer .icon--container {
@@ -753,6 +776,13 @@ output {
   align-items: center;
   font-size: 12.5px;
 }
+@media only screen and (min-width: 992px) {
+  .footer .icon--container {
+    height: 60px;
+    margin-bottom: 20px;
+    flex-direction: row;
+  }
+}
 .footer .icon--container img {
   text-align: center;
   width: 25px;
@@ -761,6 +791,12 @@ output {
 .footer .icon--container:nth-child(n)::after {
   position: absolute;
   bottom: 0;
+}
+@media only screen and (min-width: 992px) {
+  .footer .icon--container:nth-child(n)::after {
+    bottom: auto;
+    left: 120%;
+  }
 }
 .footer .icon--container:first-child::after {
   content: "Principal";
@@ -779,6 +815,11 @@ output {
 .footer .icon--container:nth-child(3) img {
   width: 33px;
   height: 33px;
+}
+@media only screen and (min-width: 992px) {
+  .footer .icon--container:nth-child(3) {
+    display: none;
+  }
 }
 .footer .icon--container:nth-child(4)::after {
   content: "Suscripciones";

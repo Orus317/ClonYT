@@ -85,6 +85,9 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @include media(desktop-s){
+            justify-content: initial;
+        }
         &--explorar {
             display: flex;
             justify-content: center;
@@ -130,6 +133,22 @@
                 padding: 4px 10px;
                 border-radius: 30px;
                 background-color: $color-fondo-secundario; 
+            }
+        }
+        @include media(desktop-s){
+            &--elements::-webkit-scrollbar{
+                width: 5px;
+                height: 5px;
+            }
+            &--elements::-webkit-scrollbar-thumb{
+                background: #ccc;
+                border-radius: 4px;
+            }
+            &--elements::-webkit-scrollbar-thumb:hover{
+                display:block;
+            }
+            &--elements::-webkit-scrollbar-thumb:active{
+                background: rgb(121, 121, 121);
             }
         }
     }

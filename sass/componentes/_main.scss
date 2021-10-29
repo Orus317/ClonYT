@@ -3,7 +3,6 @@
     flex-direction: column;    
     @include media(tablet){
         display: grid;
-        justify-self: center;
         grid-template-columns: repeat(2, 1fr);
         column-gap: 15px;
         max-width: 800px;
@@ -11,8 +10,10 @@
         margin: 0 auto;
     }
     @include media(desktop-s){
-        padding-top: 104px;
-        z-index: -100;
+        padding-top: 110px;
+        grid-template-columns: repeat(auto-fit, 370px);
+        max-width: 100%;
+        margin: 0 0 0 15vw;
     }
 }
 
